@@ -1,0 +1,3 @@
+[submodule "themes/hugo-dwevresume-theme"]
+	path = themes/hugo-dwevresume-theme
+	url = git@github.com:krusematt/hugo-devresume-theme.git
