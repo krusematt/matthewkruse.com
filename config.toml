@@ -22,18 +22,11 @@ theme = "hugo-devresume-theme"
     textPrimaryColor = "#292929"
 
 
-
-
     [params.profile]
         enable = true
         name = "Matthew Kruse"
         tagline = "Devops, Systems, FullStack Engineer & Professional Problem Solver"
         avatar = "headshot.png"
-
-
-
-
-
 
 
     [params.contact]
@@ -157,13 +150,7 @@ theme = "hugo-devresume-theme"
         enable = true
 
         [[params.interests.list]]
-        name = "Climbing"
-        [[params.interests.list]]
-        name = "Snowboarding"
-        [[params.interests.list]]
-        name = "Photography"
-        [[params.interests.list]]
-        name = "Travelling"
+        name = "Cycling"
 
 
 
@@ -190,13 +177,13 @@ theme = "hugo-devresume-theme"
         title = "Systems Engineer"
         dates = "July 2020 - Present"
         company = "Perceptyx"
-        details = "Awesome DevOps Engineer"
-        [[params.experience.list.items]]
-        details = "Bullet point one"
-        [[params.experience.list.items]]
-        details = "Bullet point two"
-        [[params.experience.list.items]]
-        details = "Bullet Three"
+        details = "Joined Perceptyx via the acquisition of the Kantar Employee Insights division.  Ensured site reliability of the Kantar infrastructure until EoL and facilitated migrating clients onto the Perceptyx platform.\n\nWrote custom Terraform modules to support the initial design of a new AWS network infrastructure.  Leveraging multi-region transit gateways, cross-account peering.  Designed routing tables in conjunction with a security VPC to ensure all North/South traffic is inspected by PaloAlto firewalls.  \n\nConfigured and set up additional monitoring tools, such as DataDog APM and Splunk.  Provided cost analysis and feature breakdown for migrating all monitoring/alerting to DataDog.  Conducted R&D on leveraging Prometheus along with Thanos as means of system monitoring and alerting via alert manager.\n\nSupported our engineering staff, recommended and implemented solutions to help support their day-to-day work\n\nRoot cause analysis for various production issues, ranging from session race conditions, intermittent network outages, application issues due to user behavior.\n\nConducted standard maintenance with the on-prem servers.\n\nProvide direct technical client support.  Would host conference calls to review technical requirements or troubleshoot issues.\n\nLeveraged SaltStack as primary means of supporting and maintaining the entire infrastructure.  Developed custom salt states and pillars to modularize functions and roles.\n\nManaged and maintained nginx load balancer configuration."
+#         [[params.experience.list.items]]
+#         details = "Bullet point one"
+#         [[params.experience.list.items]]
+#         details = "Bullet point two"
+#         [[params.experience.list.items]]
+#         details = "Bullet Three"
 
         [[params.experience.list]]
         title = "Senior Software Developer"
@@ -224,11 +211,6 @@ theme = "hugo-devresume-theme"
 
 
 
-
-
-
-
-
     [params.projects]
         enable = true
 
@@ -236,7 +218,7 @@ theme = "hugo-devresume-theme"
         [[params.projects.list]]
         title = "Interactive Data Analytics Platform - UI / Backend"
         meta = "Product/Service Deliverable"
-        tagline = "You can use this section for your side projects. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim."
+        tagline = ""
 
         [[params.projects.list]]
         title = "Employee Exit Portal - CRM Style Platform"
@@ -249,13 +231,23 @@ theme = "hugo-devresume-theme"
         tagline = "Built as a complimentary service to the Exmployee Exit Portal.  A custom ETL solution was a requirement to successfully process a rolling data file including employee exit data.  Special rules and conditions must be followed."
 
 
+    [params.recommendations]
+        enable = true
+
+        [[params.recommendations.list]]
+        title = "Systems Engineer - Perceptyx"
+        author = "Christer Edwards, Senior Systems Engineer"
+        tagline = "Matt is hard-working and professional. I have been impressed with his ability to dig into an problem until a solution is found. He has proven to be a valuable asset on our team and I would gladly work with him again."
+
+
 
 
 
 
 
     [params.information]
-        enable = true
+        enable = false
+
 
         [[params.information.list]]
         title = "Papers"
@@ -266,10 +258,7 @@ theme = "hugo-devresume-theme"
 
         [[params.information.list]]
         title = "Interests"
-        details = "Climbing, Snowboarding, Photography, Travelling"
-
-
-
+        details = "Cycling"
 
 
 
@@ -279,17 +268,25 @@ theme = "hugo-devresume-theme"
         enable = true
 
         [[params.social.list]]
-        icon = "fab fa-github-square"
-        url = "//github.com/krusematt"
-        title = "krusematt"
-        [[params.social.list]]
         icon = "fab fa-linkedin"
         url = "//linkedin.com/in/matthew-w-kruse/"
         title = "matthew-w-kruse"
+
+        [[params.social.list]]
+        icon = "fab fa-github-square"
+        url = "//github.com/krusematt"
+        title = "krusematt"
+
 #         [[params.social.list]]
 #         icon = "fab fa-twitter-square"
 #         url = "//twitter.com/username"
 #         title = "@username"
+
+
+
+    [params.footer]
+        copyright = "[MatthewKruse.com](https://matthewkruse.com)  -  Email me: [contact@MatthewKruse.com](mailto:contact@matthewkruse.com)"
+        purchased_license = true
 
 
 
