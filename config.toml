@@ -1,16 +1,7 @@
-baseURL = "http://example.org/"
+baseURL = "https://matthewkruse.com/"
 languageCode = "en"
 title = "Matthew Kruse - Engineer - Problem Solver"
 theme = "hugo-devresume-theme"
-
-
-
-#
-# [languages]
-#   [languages.en]
-#     awards = "Certification & Training"
-#
-
 
 
 [params]
@@ -47,11 +38,6 @@ theme = "hugo-devresume-theme"
         text = "www.MatthewKruse.com"
 
 
-
-
-
-
-
     [params.skills]
         enable = true
 
@@ -66,11 +52,21 @@ theme = "hugo-devresume-theme"
         [[params.skills.list.items]]
         details = "MySQL/ElasticSearch/PostgreSQL"
         [[params.skills.list.items]]
+        details = "Redis/RabbitMQ/Memcached"
+        [[params.skills.list.items]]
+        details = "Terraform/SaltStack/Ansible"
+        [[params.skills.list.items]]
+        details = "Docker/Docker-Compose"
+        [[params.skills.list.items]]
+        details = "Continuous Delivery/Integration (CI/CD)"
+        [[params.skills.list.items]]
         details = "Object-oriented design"
         [[params.skills.list.items]]
         details = "Design and implement database structures"
         [[params.skills.list.items]]
         details = "Lead and deliver complex software systems"
+        [[params.skills.list.items]]
+
 
         [[params.skills.list]]
         title = "Professional"
@@ -84,27 +80,17 @@ theme = "hugo-devresume-theme"
         details = "Good time management"
 
 
-
-
-
-
-
-
     [params.education]
         enable = false
-
-        [[params.education.list]]
-        degree = "MSc in Computer Science"
-        university = "University College London"
-        dates = "2010 - 2011"
-        [[params.education.list]]
-        degree = "BSc Maths and Physics"
-        university = "Imperial College London"
-        dates = "2007 - 2010"
-
-
-
-
+#         Example of education list
+#         [[params.education.list]]
+#         degree = "MSc in Computer Science"
+#         university = "University College London"
+#         dates = "2010 - 2011"
+#         [[params.education.list]]
+#         degree = "BSc Maths and Physics"
+#         university = "Imperial College London"
+#         dates = "2007 - 2010"
 
 
 
@@ -123,15 +109,8 @@ theme = "hugo-devresume-theme"
         date = "2015"
 
 
-
-
-
-
-
-
     [params.languages]
         enable = false
-
         [[params.languages.list]]
         name = "English"
         level = "Native"
@@ -140,35 +119,14 @@ theme = "hugo-devresume-theme"
         level = "Professional"
 
 
-
-
-
-
-
-
     [params.interests]
         enable = true
-
         [[params.interests.list]]
         name = "Cycling"
 
-
-
-
-
-
-
-
     [params.summary]
         enable = true
-        text = "I am a motivated IT professional with the desire to learn and grow with the industry.  I’m a team player who’s accustomed to working in a fast paced environment.  I possess deep knowledge in web application development with experience in server administration and database management."
-
-
-
-
-
-
-
+        text = "I am a motivated IT professional with the desire to learn and grow with the industry.  I’m a team player who’s accustomed to working in a fast paced environment.  I possess deep knowledge in web application development and architecture with experience in server administration and database management."
 
     [params.experience]
         enable = true
@@ -178,6 +136,7 @@ theme = "hugo-devresume-theme"
         dates = "July 2020 - Present"
         company = "Perceptyx"
         details = "Joined Perceptyx via the acquisition of the Kantar Employee Insights division.  Ensured site reliability of the Kantar infrastructure until EoL and facilitated migrating clients onto the Perceptyx platform.\n\nWrote custom Terraform modules to support the initial design of a new AWS network infrastructure.  Leveraging multi-region transit gateways, cross-account peering.  Designed routing tables in conjunction with a security VPC to ensure all North/South traffic is inspected by PaloAlto firewalls.  \n\nConfigured and set up additional monitoring tools, such as DataDog APM and Splunk.  Provided cost analysis and feature breakdown for migrating all monitoring/alerting to DataDog.  Conducted R&D on leveraging Prometheus along with Thanos as means of system monitoring and alerting via alert manager.\n\nSupported our engineering staff, recommended and implemented solutions to help support their day-to-day work\n\nRoot cause analysis for various production issues, ranging from session race conditions, intermittent network outages, application issues due to user behavior.\n\nConducted standard maintenance with the on-prem servers.\n\nProvide direct technical client support.  Would host conference calls to review technical requirements or troubleshoot issues.\n\nLeveraged SaltStack as primary means of supporting and maintaining the entire infrastructure.  Developed custom salt states and pillars to modularize functions and roles.\n\nManaged and maintained nginx load balancer configuration."
+#         Examples of bullet points
 #         [[params.experience.list.items]]
 #         details = "Bullet point one"
 #         [[params.experience.list.items]]
@@ -190,10 +149,6 @@ theme = "hugo-devresume-theme"
         dates = "July 2013 - July 2020"
         company = "Kantar"
         details = "Configured GitLab and Implemented CI Pipelines, created a streamlined process from committing, building, to deploying code effortlessly into production without being prone to human error.\n\nHelped our system administrators with the process of upgrading our environments (prod, uat and dev) to be more modern, scalable and stable.  I had helped explore the use of docker along with orchestration tools (ansible/swarm/rancher/kubernetes).\n\nMigrated our developers to Vagrant for local development.\n\nIntegrated more DevOps/Agile methodologies within our team.  Such as switching to GIT as our SCM and training coworkers on how to follow the GIT-FLOW branching models.\n\nAdapted our application to use SAML for user authentication.  From the initial design/discovery, system configuration and deployment.  This required coordination between myself and our onsite system administrator.\n\nDesigned and built our current real-time dashboard reporting offering to fit the needs of our existing clients, as well as future clients.  I built the front end UI (Angular2), but also helped design the underlying technology that we used to make it successful.  I was able to introduce the use of ElasticSearch to create an exceptionally fast search/filtering across our client’s dataset.  I’ve had a major role in the elastic document design and built back-end tooling in python to export data from our RDS (MySQL/MariaDB) and transformed the data for import into Elastic.  Also leveraged PhantomJS to provide means of generating PDF exports of the dashboard.\n\nExperience with NodeJS/Socket.IO to push messages to the UI.  All messages were sent through RabbitMQ and consumed by the Node process.   Leveraged various types of queues, from fanout to round-robin.\n\nHelped with various web server configurations, both Apache and Nginx.\n\nExperience with pfSense/FreeNas/ProxMox"
-#         [[params.experience.list.items]]
-#         details = "Lorem ipsum dolor sit amet, consectetuer."
-#         [[params.experience.list.items]]
-#         details = "Aenean commodo ligula eget dolor."
 
         [[params.experience.list]]
         title = "Software Engineer"
@@ -207,13 +162,8 @@ theme = "hugo-devresume-theme"
         company = "Contractor"
         details = "Worked exclusively with small businesses to provide custom IT and web based solutions.  As a one man IT department, I oversaw all technology operations:\n\nSetting up and maintaining employee workstations and VOIP phone systems\n\nProgramming web based applications for customer/employee interaction             (custom built CRM).\n\nLanding page design/development.  Custom built affiliate portal to manage/track sales.\n\nCompleted PCI Compliance, programmed/integrated merchant services within web applications.\n\nMaintained all onsite hardware (network infrastructure, computers, printers, other devices)."
 
-
-
-
-
     [params.projects]
         enable = true
-
 
         [[params.projects.list]]
         title = "Interactive Data Analytics Platform - UI / Backend"
@@ -230,7 +180,6 @@ theme = "hugo-devresume-theme"
         meta = "Client Specific Integration"
         tagline = "Built as a complimentary service to the Exmployee Exit Portal.  A custom ETL solution was a requirement to successfully process a rolling data file including employee exit data.  Special rules and conditions must be followed."
 
-
     [params.recommendations]
         enable = true
 
@@ -239,15 +188,8 @@ theme = "hugo-devresume-theme"
         author = "Christer Edwards, Senior Systems Engineer"
         tagline = "Matt is hard-working and professional. I have been impressed with his ability to dig into an problem until a solution is found. He has proven to be a valuable asset on our team and I would gladly work with him again."
 
-
-
-
-
-
-
     [params.information]
         enable = false
-
 
         [[params.information.list]]
         title = "Papers"
@@ -259,9 +201,6 @@ theme = "hugo-devresume-theme"
         [[params.information.list]]
         title = "Interests"
         details = "Cycling"
-
-
-
 
 
     [params.social]
@@ -283,10 +222,6 @@ theme = "hugo-devresume-theme"
 #         title = "@username"
 
 
-
     [params.footer]
         copyright = "[MatthewKruse.com](https://matthewkruse.com)  -  Email me: [contact@MatthewKruse.com](mailto:contact@matthewkruse.com)"
         purchased_license = true
-
-
-
