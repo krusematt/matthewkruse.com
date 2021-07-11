@@ -207,6 +207,13 @@ theme = "hugo-devresume-theme"
         enable = true
 
         [[params.social.list]]
+        class = "hide-print"  # hide this list item when media = print
+        icon = "fas fa-file-pdf"
+        url = "/matthew-kruse-resume.pdf"
+        title = "Download Resume (PDF)"
+
+
+        [[params.social.list]]
         icon = "fab fa-linkedin"
         url = "//linkedin.com/in/matthew-w-kruse/"
         title = "matthew-w-kruse"
