@@ -5,6 +5,8 @@ theme = "hugo-devresume-theme"
 
 
 [params]
+    gtagAnalytics = "G-1587DTLCZH"
+
     author = "Matthew Kruse"
     description = "Matthew Kruse - Devops, Systems and FullStack Engineer"
 
@@ -187,6 +189,13 @@ theme = "hugo-devresume-theme"
         title = "Systems Engineer - Perceptyx"
         author = "Christer Edwards, Senior Systems Engineer"
         tagline = "Matt is hard-working and professional. I have been impressed with his ability to dig into an problem until a solution is found. He has proven to be a valuable asset on our team and I would gladly work with him again."
+
+
+
+        [[params.recommendations.list]]
+        title = "Senior Software Developer - Kantar"
+        author = "Brian Easley, Senior IT Administrator"
+        tagline = "I was fortunate enough to work side by side with Matt for over five years. From the first days working with him, it was obvious he was a cut above most others. To put it succinctly, Matt is a highly motivated extremely talented engineer. From full stack development in multiple languages to DevOps expertise with a proactive positive approach to problem solving, he has proven time and time again that he can immediately make an impact with any team he's a part of. "
 
     [params.information]
         enable = false
