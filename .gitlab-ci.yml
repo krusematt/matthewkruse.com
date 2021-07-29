@@ -42,7 +42,7 @@ build_pdf:
     - deploy_site
   script:
     - mkdir $(pwd)/pdf_files
-    - docker run -e URL="https://matthewkruse.com" -e FILENAME="/pdf_files/matthew-kruse-resume.pdf" -v "$(pwd)"/pdf_files:/pdf_files git.datumhosting.com:4567/matt-kruse/pdf-generator/pdf-generator
+    - docker run  -u 996  -e URL="https://matthewkruse.com" -e FILENAME="/pdf_files/matthew-kruse-resume.pdf" -v "$(pwd)"/pdf_files:/pdf_files git.datumhosting.com:4567/matt-kruse/pdf-generator/pdf-generator
   only:
     - master
     - tags
