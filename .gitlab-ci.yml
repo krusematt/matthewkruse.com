@@ -6,7 +6,7 @@ before_script:
 build:
   stage: build
   script:
-    - docker run -v $(pwd):/site guidoffm/gohugoio-hugo -c hugo
+    - docker run -u 996 -v $(pwd):/site guidoffm/gohugoio-hugo -c hugo
   only:
   - master
   - tags
