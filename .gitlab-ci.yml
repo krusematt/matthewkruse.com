@@ -5,6 +5,8 @@ before_script:
 
 build:
   stage: build
+  artifacts:
+    untracked: true
   script:
     - docker run -u 996 -v $(pwd):/site guidoffm/gohugoio-hugo -c hugo
   only:
@@ -14,6 +16,8 @@ build:
 
 deploy:
   stage: deploy
+  dependencies:
+    - build
   script:
     - mkdir $(pwd)/.aws
     - touch $(pwd)/.aws/credentials
