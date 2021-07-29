@@ -3,7 +3,7 @@ before_script:
   - docker info
   - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
 
-build:
+build_site:
   stage: build
   artifacts:
     untracked: true
@@ -14,10 +14,10 @@ build:
   - tags
 
 
-deploy:
+deploy_site:
   stage: deploy
   dependencies:
-    - build
+    - build_site
   script:
     - mkdir $(pwd)/.aws
     - touch $(pwd)/.aws/credentials
@@ -31,9 +31,9 @@ deploy:
 
 
 build_pdf:
-  stage: build_pdf
+  stage: build
   dependencies:
-    - deploy
+    - deploy_site
   script:
     - mkdir $(pwd)/pdf_files
     - docker run -e URL="https://matthewkruse.com" -e FILENAME="/pdf_files/matthew-kruse-resume.pdf" -v "$(pwd)"/pdf_files:/pdf_files git.datumhosting.com:4567/matt-kruse/pdf-generator/pdf-generator
@@ -45,9 +45,9 @@ build_pdf:
 
 
 deploy_pdf:
-  stage: deploy_pdf
+  stage: deploy
   dependencies:
-    - build
+    - build_pdf
   script:
     - mkdir $(pwd)/.aws
     - touch $(pwd)/.aws/credentials
