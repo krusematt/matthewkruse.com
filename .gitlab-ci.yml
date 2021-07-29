@@ -7,7 +7,19 @@ build:
   stage: build
   script:
     - docker run -v $(pwd):/site guidoffm/gohugoio-hugo -c hugo
-    - docker run -v $(pwd)/public:/public --rm -it -e AWS_DEFAULT_REGION=us-east-2 -e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY -e AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY  amazon/aws-cli s3 sync /public/ s3://matthewkruse.com-root
   only:
   - master
   - tags
+
+
+deploy:
+  stage: deploy
+  script:
+    - mkdir .aws
+    - echo "[default]" > .aws/credentials
+    - echo "aws_access_key_id = ${AWS_ACCESS_KEY}" >> .aws/credentials
+    - echo "aws_secret_access_key = ${AWS_SECRET_ACCESS_KEY}" >> .aws/credentials
+    - docker run -v ${pwd}/.aws:/root/.aws -v $(pwd)/public:/public --rm -it -e AWS_DEFAULT_REGION=us-east-2  amazon/aws-cli s3 sync /public/ s3://matthewkruse.com-root
+  only:
+    - master
+    - tags
