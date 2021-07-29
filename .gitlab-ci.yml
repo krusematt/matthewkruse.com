@@ -17,9 +17,9 @@ deploy:
   script:
     - mkdir $(pwd)/.aws
     - touch $(pwd)/.aws/credentials
-    - echo "[default]" > ·$(pwd)/.aws/credentials
-    - echo "aws_access_key_id = ${AWS_ACCESS_KEY}" >> ·$(pwd)/.aws/credentials
-    - echo "aws_secret_access_key = ${AWS_SECRET_ACCESS_KEY}" >> ·$(pwd)/.aws/credentials
+    - echo "[default]" > `pwd`/.aws/credentials
+    - echo "aws_access_key_id = ${AWS_ACCESS_KEY}" >> `pwd`/.aws/credentials
+    - echo "aws_secret_access_key = ${AWS_SECRET_ACCESS_KEY}" >> `pwd`/.aws/credentials
     - docker run -v ·$(pwd)/.aws:/root/.aws -v $(pwd)/public:/public --rm -it -e AWS_DEFAULT_REGION=us-east-2  amazon/aws-cli s3 sync /public/ s3://matthewkruse.com-root
   only:
     - master
