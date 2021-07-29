@@ -16,6 +16,7 @@ deploy:
   stage: deploy
   script:
     - mkdir $(pwd)/.aws
+    - touch $(pwd)/.aws/credentials
     - echo "[default]" > ·$(pwd)/.aws/credentials
     - echo "aws_access_key_id = ${AWS_ACCESS_KEY}" >> ·$(pwd)/.aws/credentials
     - echo "aws_secret_access_key = ${AWS_SECRET_ACCESS_KEY}" >> ·$(pwd)/.aws/credentials
